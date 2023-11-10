@@ -1,0 +1,57 @@
+body {
+  overflow: hidden;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: 9.25rem auto;
+  grid-template-areas:
+    "header"
+    "main";
+  background-image: url("./assets/images/meghan-mosser-8FCNO3t7fso-unsplash.jpg");
+  background-size: cover;
+  background-position: top;
+  height: 100vh;
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: aliceblue;
+}
+
+a:hover {
+  font-weight: 700;
+}
+
+main {
+  grid-area: main;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(37, 37, 37);
+  position: fixed;
+  width: 100%;
+  height: 9.25rem;
+  grid-area: header;
+}
+
+header img {
+  width: 6rem;
+  height: 6rem;
+  padding: 1.5rem;
+  border-radius: 50%;
+}
+
+ul {
+  display: flex;
+  justify-content: space-around;
+  gap: 5rem;
+  padding-inline: 4rem;
+  padding-block: 3rem;
+  font-size: 2rem;
+  font-family: "Unbounded", cursive;
+  color: rgb(255, 255, 255);
+}
