@@ -1,0 +1,69 @@
+.main {
+  border: 1px solid #000;
+  margin-top: 5rem;
+}
+
+.contact-form {
+  background-color: #83d6d9b6;
+  width: 50%;
+  text-align: center;
+  flex-direction: column;
+  font-size: 2rem;
+  padding: 3rem;
+  line-height: 1.5;
+  min-height: 60vh;
+  color: aliceblue;
+}
+
+.gender-part {
+  margin-block: 2rem;
+}
+
+.gender-part p,
+.details p,
+.numbers-email p {
+  font-weight: 700;
+  font-size: 2.2rem;
+  padding-top: 2rem;
+  text-shadow: 2px 2px 2px #3b3b3b;
+}
+
+textarea,
+input {
+  margin-top: 1rem;
+  height: 2rem;
+  background-color: #e4e7e7b6;
+  border: none;
+  border-radius: 5px;
+}
+
+.shadow {
+  box-shadow: 2px 2px 2px #3a3a3a;
+}
+
+.description-part {
+  font-weight: 700;
+  text-shadow: 2px 2px 2px #3b3b3b;
+}
+.description-area {
+  height: 60vh;
+  width: 90%;
+  border-radius: 5px;
+}
+
+.submit-form {
+  padding: 1rem;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #fff;
+  background-color: rgb(37, 37, 37);
+  letter-spacing: 0.25rem;
+}
+
+.submit-form:hover {
+  background-color: #fff;
+  color: #000;
+  cursor: not-allowed;
+  transition: ease 300ms;
+}

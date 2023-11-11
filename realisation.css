@@ -1,0 +1,23 @@
+.projects-container {
+  display: flex;
+  background-color: rgb(37, 37, 37);
+  height: 70vh;
+}
+
+img {
+  width: 50%;
+  margin: 2rem;
+  border: 1px dotted rgb(37, 37, 37);
+}
+
+.project {
+  height: auto;
+  text-align: center;
+  margin: 2rem;
+  background-color: #fff;
+}
+
+.project p {
+  font-weight: 700;
+  font-size: 2rem;
+}
