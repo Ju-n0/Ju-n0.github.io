@@ -6,6 +6,8 @@
   justify-content: space-evenly;
   margin-inline: auto;
   align-items: center;
+
+  margin-block: 6rem;
 }
 
 .page-under-construction {
@@ -26,7 +28,6 @@
   justify-content: center;
   align-items: center;
   box-shadow: 0px 0px 2px #3a3a3a;
-  border: 2px solid transparent;
 }
 
 .project p {
@@ -35,12 +36,13 @@
 }
 
 .project-center {
-  height: 110%;
+  height: 100%;
+  scale: 1.1;
   z-index: 10;
 }
 
-.project-center:hover {
-  border: 2px solid rgb(7, 7, 7);
+.project:hover {
+  outline: 3px solid #83d6d9b6;
 }
 
 .project-left,
