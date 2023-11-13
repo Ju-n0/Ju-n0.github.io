@@ -148,10 +148,10 @@ main {
 
 /*RESPONSIVE*/
 
-@media screen and (max-width: 696px) {
+@media screen and (max-width: 660px) {
   .card {
-    scale: 0.5;
-    margin-top: 35rem;
+    scale: 0.8;
+    margin-top: 15rem;
   }
 
   .card--footer span {
@@ -161,8 +161,9 @@ main {
 
 @media screen and (max-width: 472px) {
   .card {
-    scale: 0.3;
-    margin-top: 35rem;
+    scale: 0.5;
+    margin-top: 10rem;
+    margin-inline: 0;
   }
 
   .card--republic {
