@@ -165,6 +165,10 @@ main {
     margin-top: 35rem;
   }
 
+  .card--republic {
+    font-size: 0.8rem;
+  }
+
   .card--footer span {
     font-size: 0.8rem;
   }
