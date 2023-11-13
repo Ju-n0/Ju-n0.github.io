@@ -1,6 +1,11 @@
 .main {
   border: 1px solid #000;
   margin-top: 5rem;
+  display: flex;
+  margin: 5rem auto;
+  justify-content: center;
+  gap: 6rem;
+  width: 80%;
 }
 
 .contact-form {

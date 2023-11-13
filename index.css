@@ -5,6 +5,10 @@
     "header"
     "main";
   background-image: url("./assets/images/meghan-mosser-8FCNO3t7fso-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: rgb(37, 37, 37);
   min-height: 100vh;
 }
 
@@ -36,7 +40,7 @@ header {
 header img {
   width: 6rem;
   height: 6rem;
-  padding: 1.5rem;
+  padding: 1.5rem 4rem;
   border-radius: 50%;
 }
 
@@ -52,7 +56,7 @@ h1 span {
   margin-left: 0;
 }
 
-ul {
+.nav-ul {
   display: flex;
   justify-content: space-around;
   gap: 5rem;
@@ -61,20 +65,26 @@ ul {
   font-size: 2rem;
   font-family: "Unbounded", cursive;
   color: rgb(255, 255, 255);
+  list-style: none;
 }
 
-main {
+.main-home {
   display: flex;
   margin: 5rem auto;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 6rem;
   width: 80%;
+  height: 80vh;
 }
+
 .presentation {
-  background-color: #ffffff71;
-  font-size: 1.25rem;
+  background-color: #ffffffb1;
+  font-size: 1.1rem;
   width: 50%;
+  height: 100%;
   line-height: 1.5;
   text-align: justify;
+  font-family: "Unbounded", cursive;
 }
 
 .presentation h2 {
@@ -91,8 +101,27 @@ main {
   padding-top: 1.5rem;
 }
 
+.presentation ul,
+.presentation ol {
+  margin-inline: 3rem;
+  padding-top: 1.5rem;
+}
+
 .img-presentation {
-  width: auto;
-  height: 60rem;
   border: 2px solid #000;
+  width: 50%;
+  height: 100%;
+}
+
+.italic {
+  font-style: italic;
+  font-size: 1rem;
+}
+
+.strong {
+  font-weight: 700;
+}
+
+.strike {
+  text-decoration: line-through;
 }
