@@ -96,9 +96,9 @@ input {
   }
 } */
 
-@media screen and (max-width: 585px) {
+@media screen and (max-width: 660px) {
   .main {
-    margin-top: 30rem;
+    margin-top: 8rem;
   }
 
   .contact-form {

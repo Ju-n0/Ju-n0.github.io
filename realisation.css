@@ -71,18 +71,25 @@
 
 @media screen and (max-width: 900px) {
   .projects-container {
-    margin-top: 45rem;
+    margin-top: 50rem;
+    margin-bottom: 25rem;
   }
 }
 
-@media screen and (max-width: 680px) {
+@media screen and (max-width: 660px) {
   .projects-container {
-    margin-top: 40rem;
+    margin-top: 25rem;
   }
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 550px) {
   .projects-container {
-    margin-top: 35rem;
+    margin-top: 15rem;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .projects-container {
+    margin-top: 5rem;
   }
 }
