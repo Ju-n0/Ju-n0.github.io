@@ -38,11 +38,11 @@
         <div class="contact-form">
           <fieldset class="gender-part">
             <p>Vous êtes ?</p>
-            <input type="radio" name="gender" />
-            <label for="gender">Une femme</label>
+            <div class="gender-div">
+              <div><input type="radio" name="gender" /> <label for="gender">Une femme</label></div>
 
-            <input type="radio" name="gender" />
-            <label for="gender">Un homme</label>
+              <div><input type="radio" name="gender" /> <label for="gender">Un homme</label></div>
+            </div>
           </fieldset>
 
           <fieldset class="details">
@@ -69,14 +69,16 @@
             </div>
             <div>
               <p>Préférence de contact</p>
-              <label>
-                <input type="checkbox" name="contact-by-email" value="contact-by-email" />
-                Par email
-              </label>
-              <label>
-                <input type="checkbox" name="contact-by-phone" value="contact-by-phone" />
-                Par téléphone
-              </label>
+              <div class="contact-fav">
+                <label>
+                  <input type="checkbox" name="contact-by-email" value="contact-by-email" />
+                  Par email
+                </label>
+                <label>
+                  <input type="checkbox" name="contact-by-phone" value="contact-by-phone" />
+                  Par téléphone
+                </label>
+              </div>
             </div>
           </fieldset>
         </div>

@@ -2,7 +2,7 @@
   border: 1px solid #000;
   margin-top: 5rem;
   display: flex;
-  margin: 5rem auto;
+  margin: 15rem auto;
   justify-content: center;
   width: 80%;
 }
@@ -10,8 +10,7 @@
 .contact-form {
   background-color: #83d6d9b6;
   width: 50%;
-  text-align: center;
-  flex-direction: column;
+
   font-size: 2rem;
   padding: 3rem;
   line-height: 1.5;
@@ -21,6 +20,13 @@
 
 .gender-part {
   margin-block: 2rem;
+}
+
+.gender-div,
+.contact-fav {
+  display: flex;
+  justify-content: center;
+  text-align: center;
 }
 
 .gender-part p,
@@ -39,6 +45,7 @@ input {
   background-color: #e4e7e7b6;
   border: none;
   border-radius: 5px;
+  width: 100%;
 }
 
 .shadow {
@@ -71,3 +78,36 @@ input {
   cursor: not-allowed;
   transition: ease 300ms;
 }
+
+@media screen and (max-width: 1200px) {
+  .main {
+    margin-top: 25rem;
+    flex-direction: column;
+  }
+
+  .contact-form {
+    width: auto;
+  }
+}
+
+/* @media screen and (max-width: 900px) {
+  .main {
+    margin-top: 25rem;
+  }
+} */
+
+@media screen and (max-width: 585px) {
+  .main {
+    margin-top: 30rem;
+  }
+
+  .contact-form {
+    font-size: 1.5rem;
+  }
+}
+
+/* @media screen and (max-width: 450px) {
+  .main {
+    margin-top: 35rem;
+  }
+}  */

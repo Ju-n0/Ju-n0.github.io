@@ -7,6 +7,7 @@ main {
 }
 
 .card {
+  margin-top: 45rem;
   display: grid;
   grid-template-rows: 2rem 2rem var(--card-body-height) 5rem;
   grid-template-columns: 1fr 2fr;
@@ -33,6 +34,11 @@ main {
     -webkit-transform: scaleX(1);
     transform: scaleX(1);
   }
+}
+
+.card:hover {
+  rotate: 360deg;
+  transition: ease-in 2000ms;
 }
 
 .card--republic {
@@ -138,4 +144,28 @@ main {
 
 .signature {
   width: 5rem;
+}
+
+/*RESPONSIVE*/
+
+@media screen and (max-width: 696px) {
+  .card {
+    scale: 0.5;
+    margin-top: 35rem;
+  }
+
+  .card--footer span {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 472px) {
+  .card {
+    scale: 0.3;
+    margin-top: 35rem;
+  }
+
+  .card--footer span {
+    font-size: 0.8rem;
+  }
 }
