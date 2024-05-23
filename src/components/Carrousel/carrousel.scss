@@ -1,0 +1,25 @@
+.carrousel-container {
+  display: flex;
+
+  & img {
+    height: 4rem;
+    width: 12rem;
+    // border-radius: 15px;
+  }
+  & .arrow {
+    margin-block: auto;
+    cursor: pointer;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.first {
+  border-radius: 15px 15px 0 0;
+}
+
+.last {
+  border-radius: 0 0 15px 15px;
+}

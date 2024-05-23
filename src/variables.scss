@@ -1,0 +1,7 @@
+@use "sass:color";
+
+$color: #efefef;
+$color-primary: rgb(107, 203, 200);
+$color-secondary: #cb9d6c;
+$color-secondary-light: color.scale($color-secondary, $lightness: 40%);
+$color-bg: #282c34;

@@ -1,0 +1,106 @@
+@use "../../variables.scss" as v;
+@import "../../mq.scss";
+
+.presentation {
+  transition: translate 500ms ease-in-out;
+  z-index: 105;
+
+  @include min-700 {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+  }
+
+  &-hidden {
+    .presentation-container {
+      display: none;
+    }
+
+    @include min-700 {
+      translate: 0 calc(100% - 43px);
+
+      .presentation-container {
+        display: flex;
+      }
+    }
+
+    @include min-1550 {
+      translate: 0 calc(100% - 56px);
+    }
+  }
+}
+
+.presentation-title {
+  padding: 0.5rem;
+  background-color: rgba(0, 0, 0, 0.745);
+  color: #fff;
+  font-size: 1.5rem;
+
+  border: none;
+  width: 100%;
+
+  @include minWidth700-maxHeight870 {
+    * {
+      border: 1px solid red;
+    }
+    width: fit-content;
+    border-radius: 0 5px 0 0;
+  }
+
+  @include min-1550 {
+    font-size: 2rem;
+    padding: 0.75rem;
+  }
+}
+
+.presentation-container {
+  padding: 1.5rem;
+  padding-top: 1rem;
+
+  border: solid 4px rgba(0, 0, 0, 0.745);
+  display: flex;
+  flex-direction: column;
+
+  background-color: #fff;
+
+  @include min-700 {
+    flex-direction: row;
+    border-radius: 0 20px 0 0;
+  }
+}
+
+.presentation-text {
+  padding-top: 1rem;
+  margin-block: auto;
+
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+  font-size: 1.05rem;
+  text-align: justify;
+
+  @include min-700 {
+    width: 20rem;
+  }
+
+  @include min-890 {
+    width: 30rem;
+  }
+
+  &-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: v.$color-secondary;
+  }
+}
+
+.presentation-img {
+  margin-block: auto;
+  position: relative;
+
+  @include min-700 {
+    width: 20rem;
+    margin-right: 2rem;
+  }
+}

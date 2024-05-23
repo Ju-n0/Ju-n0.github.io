@@ -1,0 +1,150 @@
+@use "../../variables.scss" as v;
+@import "../../mq.scss";
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  z-index: 105;
+  justify-content: center;
+  transition: translate 500ms ease-in-out;
+
+  @include min-700 {
+    position: fixed;
+    top: 0rem;
+    right: 0rem;
+    flex-direction: row;
+  }
+
+  &-hidden {
+    .contact-container {
+      display: none;
+    }
+
+    @include min-700 {
+      .contact-container {
+        display: flex;
+      }
+
+      translate: calc(100% - 41px);
+    }
+
+    @include min-1550 {
+      translate: calc(100% - 60px);
+    }
+  }
+}
+
+.contact-container {
+  background-color: v.$color-primary;
+  display: flex;
+  flex-direction: column;
+  border: solid 4px rgba(0, 0, 0, 0.745);
+
+  @include min-700 {
+    flex-direction: row;
+    border-radius: 0 0 0 20px;
+  }
+}
+
+.contact-form {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+
+  @include min-700 {
+    padding: 1.5rem;
+  }
+
+  & fieldset {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    @include min-700 {
+      gap: 1rem;
+    }
+  }
+  & textarea {
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    height: 15rem;
+    width: 100%;
+    resize: none;
+    font-size: 1.15rem;
+
+    @include min-700 {
+      width: 25rem;
+    }
+  }
+
+  & button {
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: v.$color-secondary;
+    background-color: #fff;
+    border: none;
+    border-radius: 10px;
+    width: fit-content;
+    margin-inline: auto;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  }
+}
+.details {
+  margin-bottom: 2rem;
+
+  & p {
+    margin-top: 0.75rem;
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    margin-inline: auto;
+  }
+
+  & label {
+    display: block;
+    font-size: 1.15rem;
+    margin-bottom: 0.25rem;
+  }
+
+  & input {
+    font-size: 1.15rem;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    width: 100%;
+  }
+}
+.contact-title {
+  align-self: flex-start;
+  padding: 0.5rem;
+  background-color: rgba(0, 0, 0, 0.745);
+  color: #fff;
+  font-size: 1.5rem;
+  width: 100%;
+
+  border: none;
+
+  @include min-700 {
+    writing-mode: vertical-lr;
+    rotate: 180deg;
+    // transform: rotate(-90deg);
+    // transform-origin: bottom center;
+
+    width: fit-content;
+    border-radius: 0 5px 0 0;
+  }
+
+  @include min-1550 {
+    font-size: 2rem;
+    padding: 0.75rem;
+  }
+}
+
+.description-part {
+  font-weight: 600;
+  font-size: 1.25rem;
+  margin-top: 0.5rem;
+  margin-inline: auto;
+  margin-bottom: 0.5rem;
+}

@@ -1,0 +1,111 @@
+@use "../../variables.scss" as v;
+
+@import "../../mq.scss";
+
+.name {
+  font-size: 3rem;
+  font-family: "Architects Daughter", cursive;
+  color: #060309b6;
+  margin-right: 5rem;
+  margin-inline: auto;
+  margin-top: 3rem;
+  padding-inline: 3rem;
+
+  @include min-350 {
+    font-size: 4rem;
+  }
+
+  @include min-700 {
+    margin-left: 2rem;
+  }
+}
+
+.name span {
+  color: v.$color-secondary-light;
+  font-size: 0.7em;
+  font-style: italic;
+  animation: 3s 0.3s forwards blink infinite;
+  opacity: 0;
+}
+
+@keyframes blink {
+  0%,
+  50%,
+  100% {
+    opacity: 1;
+  }
+  25%,
+  75% {
+    opacity: 0;
+  }
+}
+
+.name-container {
+  z-index: 102;
+
+  display: flex;
+  flex-direction: column-reverse;
+  width: 100%;
+  height: fit-content;
+  background-color: v.$color-secondary;
+  align-items: center;
+  padding-bottom: 2rem;
+
+  @include min-700 {
+    position: fixed;
+    top: 0rem;
+    flex-direction: row;
+    border-radius: 0 0 95% 0;
+    width: fit-content;
+    align-items: flex-start;
+    padding-bottom: 0rem;
+  }
+}
+
+.carrousel-part {
+  padding: 1rem;
+  border-radius: 25px;
+  margin-top: 1rem;
+  background-color: v.$color-secondary-light;
+  box-shadow: 2px 2px 2px #00000053;
+
+  @include min-700 {
+    margin: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  & p {
+    font-size: 1.15rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+}
+
+.name-part-emoticon {
+  margin-right: 0.5rem;
+}
+
+.name-part button {
+  font-family: "Raleway", sans-serif;
+  display: flex;
+  align-self: flex-end;
+  line-height: 1.5rem;
+  background-color: transparent;
+  border: none;
+  font-size: 1.15rem;
+  cursor: pointer;
+  color: #000;
+  margin-left: 2rem;
+}
+
+.name-part a {
+  padding-inline: 0.5rem;
+  display: flex;
+  align-self: flex-end;
+  line-height: 1.5rem;
+  text-decoration: none;
+  color: #000;
+  font-size: 1.15rem;
+  margin-left: 2rem;
+}

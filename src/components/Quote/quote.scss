@@ -1,0 +1,66 @@
+@import "../../mq.scss";
+
+.quote-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  z-index: 99;
+
+  @include min-700 {
+    width: 70%;
+    margin-inline: auto;
+  }
+
+  @include min-1160 {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 35rem;
+  }
+
+  &-text {
+    position: absolute;
+    margin-bottom: 5rem;
+    font-family: "Parisienne", cursive;
+    font-weight: 500;
+    font-size: 1.5rem;
+    margin-inline: auto;
+    border-radius: 25px;
+    width: 80%;
+
+    @include min-1160 {
+      top: -15%;
+      margin-top: 1rem;
+      margin-left: 3rem;
+      padding: 1rem;
+    }
+    @include min-1160 {
+      top: -10%;
+    }
+
+    span {
+      font-family: "Parisienne", cursive;
+      display: flex;
+      padding-top: 2rem;
+      font-size: 1.5rem;
+      justify-content: flex-end;
+      margin-right: 1rem;
+      font-style: italic;
+    }
+  }
+
+  &-image {
+    display: block;
+    width: 80vh;
+
+    @include min-1280 {
+      width: 80%;
+    }
+
+    @include min-1550 {
+      width: 80%;
+    }
+  }
+}

@@ -1,0 +1,186 @@
+@use "../../variables.scss" as v;
+
+@import "../../mq.scss";
+
+.modal {
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 200;
+  opacity: 1;
+  pointer-events: all;
+  transition: opacity 500ms ease-in-out;
+
+  .blur-container {
+    position: absolute;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    inset: 0;
+    z-index: -1;
+    transition: all 500ms ease-in-out;
+  }
+
+  &-hidden {
+    opacity: 0;
+    pointer-events: none;
+
+    .blur-container {
+      backdrop-filter: blur(0);
+      -webkit-backdrop-filter: blur(0px);
+    }
+  }
+}
+.header-memo-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.new-game {
+  padding: 0.5rem;
+  border: none;
+  position: fixed;
+  bottom: -10%;
+  left: 5%;
+  cursor: pointer;
+
+  @include min-700 {
+    bottom: revert;
+    left: 1rem;
+  }
+}
+
+.CV-link {
+  color: #000;
+  text-decoration: none;
+  text-align: center;
+  width: 9rem;
+  padding: 0.3rem;
+  bottom: -13%;
+  left: 45%;
+
+  @include min-700 {
+    width: 10rem;
+    bottom: 4.5rem;
+    rotate: 270deg;
+    left: -3rem;
+  }
+}
+.memo-container {
+  padding: 0.5rem;
+  background-color: v.$color-secondary;
+  border-radius: 15px;
+  border: solid 2px #000;
+  max-width: 800px;
+  width: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+
+  &-flower {
+    background-color: #ed9691;
+    color: #ffffff;
+  }
+  &-dark {
+    background-color: #000000d1;
+    color: #9900ff;
+  }
+
+  & h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-block: 0.5rem;
+  }
+
+  &-close {
+    position: fixed;
+    top: -1.5rem;
+    right: -1rem;
+    cursor: pointer;
+  }
+
+  &-theme {
+    font-weight: 600;
+    padding-bottom: 1rem;
+    padding-right: 1rem;
+    font-size: 0.75rem;
+    text-align: center;
+
+    &-button {
+      color: #000;
+      font-family: "Raleway", sans-serif;
+      font-weight: 600;
+      background-color: v.$color-secondary-light;
+      border: none;
+      cursor: pointer;
+      align-self: flex-start;
+      font-size: 1rem;
+      border-radius: 5px;
+      padding-inline-start: 0.5rem;
+      margin-inline: 0.5rem;
+
+      @include min-700 {
+        font-size: 1.15rem;
+      }
+
+      &-flower {
+        color: #fff;
+        background-color: #f9d8d765;
+      }
+
+      &-dark {
+        color: #9900ff;
+        background-color: rgb(55, 55, 55);
+      }
+    }
+  }
+}
+
+.game-container {
+  margin-inline: auto;
+  max-width: 800px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3%;
+  padding-inline: 2rem;
+
+  & button {
+    border: none;
+    background-color: transparent;
+    width: 30%;
+    aspect-ratio: 9/13;
+    padding: 0;
+
+    @include min-700 {
+      width: 20%;
+    }
+
+    &:has(.game-container-img-discovered) {
+      pointer-events: none;
+    }
+  }
+
+  &-img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+
+    &-hidden {
+      display: none;
+      height: 208px;
+    }
+
+    &-discovered {
+      filter: grayscale(0.8) blur(2px) opacity(0.6);
+      cursor: not-allowed;
+    }
+  }
+}
