@@ -1,6 +1,4 @@
-import { useState } from "react";
 import backCard from "../../assets/backCard.png";
-import { log } from "console";
 
 interface CardProps {
   image: string;
@@ -10,7 +8,7 @@ interface CardProps {
   cardIsHidden: boolean;
   isDiscovered: string[];
 }
-function Card({ image, onClick, cardIsHidden, isDiscovered }: CardProps) {
+function Card({ image, onClick, cardIsHidden, isDiscovered }: Readonly<CardProps>) {
   const classCardfront = () => {
     if (isDiscovered.includes(image)) {
       return "game-container-img game-container-img-discovered";

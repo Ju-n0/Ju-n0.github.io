@@ -16,12 +16,12 @@ function Modal({ isHidden, setIsHidden }: ModalProps) {
   const [theme, setTheme] = useState("pro");
   const [activeCards, setActiveCards] = useState<number[]>([]);
   const [firstCard, setFirstCard] = useState<string | null>(null);
-  const [isDiscovered, setIsDiscovered] = useState<number[]>([]);
+  const [isDiscovered, setIsDiscovered] = useState<string[]>([]);
   const [isClickable, setIsClickable] = useState(true);
 
   const [cardIsHidden, setCardIsHidden] = useState(false);
   const randomArray = useMemo(() => {
-    return imageSrcArray.toSorted(() => 0.5 - Math.random());
+    return [...imageSrcArray].sort(() => 0.5 - Math.random());
   }, [imageSrcArray]);
 
   useEffect(() => {
@@ -161,7 +161,7 @@ function Modal({ isHidden, setIsHidden }: ModalProps) {
                     setFirstCard(null);
                     setActiveCards([]);
                     setIsClickable(true);
-                  }, 1000);
+                  }, 750);
 
                   return;
                 }

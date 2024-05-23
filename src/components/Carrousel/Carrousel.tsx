@@ -10,7 +10,7 @@ interface CarrouselProps {
   last?: boolean;
 }
 
-function Carrousel({ imageSrcArray, first, last }: CarrouselProps) {
+function Carrousel({ imageSrcArray, first, last }: Readonly<CarrouselProps>) {
   const [activeIndex, setActiveIndex] = useState<number>(0);
   const changePrevSlide = () => {
     setActiveIndex(activeIndex === 0 ? imageSrcArray.length - 1 : activeIndex - 1);
@@ -30,7 +30,7 @@ function Carrousel({ imageSrcArray, first, last }: CarrouselProps) {
       {imageSrcArray.map((image, index) => (
         <img
           src={image}
-          key={index}
+          key={index + Math.random().toString().slice(2, 10)}
           className={[
             activeIndex === index ? "visible" : "hidden",
             first ? "first" : "",

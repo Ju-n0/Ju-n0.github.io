@@ -2,7 +2,7 @@ import "./projectsContainer.scss";
 import { Link } from "react-router-dom";
 import { Layout } from "react-feather";
 
-import projectsArray from "../../data/projects.json";
+import projectsArray from "../../data/projects";
 
 function ProjectsContainer() {
   return (
