@@ -53,14 +53,6 @@
 
   &-image {
     display: block;
-    width: 80vh;
-
-    @include min-1280 {
-      width: 80%;
-    }
-
-    @include min-1550 {
-      width: 80%;
-    }
+    width: 80%;
   }
 }
