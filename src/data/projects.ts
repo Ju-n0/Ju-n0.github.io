@@ -4,10 +4,21 @@ import todolist from "../assets/images/projects/listecourses.png";
 import happypenpal from "../assets/images/projects/happypenpal.png";
 import hcp from "../assets/images/projects/hcp.png";
 import colorpicker from "../assets/images/projects/colorpicker.png";
+import nosamislesbetes from "../assets/images/projects/nosamislesbetes.png";
 
 export default [
   {
     id: "1",
+    title: "nos-amis-les-betes",
+    img_source: nosamislesbetes,
+    subtitle: "Un site de salon de toilettage",
+    description:
+      "Site de vitrine d'un salon de toilettage, permettant la prise de rendez-vous, la prise de contact et incluant avis clients, conseils pour les chiens, tarifs et derniers relookings",
+    link: "https://github.com/Ju-n0/nos-amis-les-betes",
+    deployed_src: "",
+  },
+  {
+    id: "2",
     title: "make-it-up",
     img_source: makeitup,
     subtitle: "Un site de référencement de maquillage",
@@ -17,7 +28,7 @@ export default [
     deployed_src: "",
   },
   {
-    id: "2",
+    id: "3",
     title: "quote-generator",
     img_source: quotegenerator,
     subtitle: "Un générateur de citation",
@@ -27,7 +38,7 @@ export default [
     deployed_src: "",
   },
   {
-    id: "3",
+    id: "4",
     title: "liste-courses",
     img_source: todolist,
     subtitle: "Une todo List",
@@ -37,7 +48,7 @@ export default [
     deployed_src: "",
   },
   {
-    id: "4",
+    id: "5",
     title: "happy-penpal",
     img_source: happypenpal,
     subtitle: "Un site de correspondance internationale",
@@ -47,7 +58,7 @@ export default [
     deployed_src: "",
   },
   {
-    id: "5",
+    id: "6",
     title: "HCP",
     img_source: hcp,
     subtitle: "Un site vitrine en gestion de patrimoine",
@@ -57,7 +68,7 @@ export default [
     deployed_src: "https://heritage-conseil-patrimoine.fr/",
   },
   {
-    id: "6",
+    id: "7",
     title: "Color-picker",
     img_source: colorpicker,
     subtitle: "Un jeu de couleur",
